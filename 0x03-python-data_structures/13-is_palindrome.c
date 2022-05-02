@@ -13,16 +13,14 @@ int is_palindrome(listint_t **head)
 	int tab[100];
 	listint_t *temp = *head;
 
-	length = listint_len(*head);
-	if (length < 2)
-		return (1);
-
 	temp = *head;
 	while (temp)
 	{
 		temp = temp->next;
 		length++;
 	}
+	if (length < 2)
+		return (1);
 
 	while (temp != NULL)
 	{
