@@ -1,45 +1,64 @@
 #include "lists.h"
+
 /**
- * is_palindrome - function that check for palindrom
- * @head:list
- *Return: 0 or 1
+ * listint_len - Count the number of elements in a listint_t list
+ *
+ * @h: Head of the list
+ * Return: Number of elements
  */
+
+int listint_len(listint_t *h)
+{
+	int count = 0;
+	listint_t *temp = h;
+
+	while (temp)
+	{
+		temp = temp->next;
+		count++;
+	}
+
+	return (count);
+}
+
+/**
+ * is_palindrome - Check if the linked list is a palindrome
+ *
+ * @head: Head of the list
+ * Return: 1 if it's a palindrome, 0 if not
+ */
+
 int is_palindrome(listint_t **head)
 {
-	const listint_t *current;
-	int len;
-	int i, j;
-	int arr[10000];
+	int length, i = 0, j = 0;
+	int tab[100];
+	listint_t *temp;
 
 	if (*head == NULL)
 		return (1);
-	current = *head;
-	len = 0;
-	while (current != NULL)
-	{
-		current = current->next;
-		len++;
-	}
-	if (len == 1)
+
+	length = listint_len(*head);
+	if (length == 1)
 		return (1);
 
-	current = *head;
-	i = 0;
-	while (current != NULL)
+	temp = *head;
+
+	while (temp != NULL)
 	{
-		arr[i] = current->n;
+		tab[i] = temp->n;
+		temp = temp->next;
 		i++;
-		current = current->next;
 	}
-	j = 0;
+
 	i--;
-	len--;
-	while (i >= (len / 2))
+	length--;
+	while (i >= (length / 2))
 	{
-		if (arr[i] != arr[j])
+		if (tab[j] != tab[i])
 			return (0);
-		i--;
 		j++;
+		i--;
 	}
+
 	return (1);
 }
