@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 	int tab[100];
 	listint_t *temp = *head;
 
-	temp = *head;
+
 	while (temp)
 	{
 		temp = temp->next;
@@ -22,6 +22,7 @@ int is_palindrome(listint_t **head)
 	if (length < 2)
 		return (1);
 
+	temp = *head;
 	while (temp != NULL)
 	{
 		tab[i] = temp->n;
