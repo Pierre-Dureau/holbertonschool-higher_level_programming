@@ -46,7 +46,7 @@ int is_palindrome(listint_t **head)
 
 	i--;
 	length--;
-	for (j = 0; i > j; j++, i--)
+	for (j = 0; i >= (length / 2); j++, i--)
 	{
 		if (tab[j] != tab[i])
 			return (0);
