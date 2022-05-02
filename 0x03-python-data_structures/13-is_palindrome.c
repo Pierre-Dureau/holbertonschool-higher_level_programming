@@ -1,28 +1,6 @@
 #include "lists.h"
 
 /**
- * get_value - Get the value at index object
- *
- * @head: Head of the list
- * @index: Index of the node
- * Return: The value
- */
-
-int get_value(listint_t *head, unsigned int index)
-{
-	unsigned int i = 0;
-	listint_t *temp = head;
-
-	while (i < index)
-	{
-		temp = temp->next;
-		i++;
-	}
-
-	return (temp->n);
-}
-
-/**
  * listint_len - Count the number of elements in a listint_t list
  *
  * @h: Head of the list
@@ -54,19 +32,30 @@ int is_palindrome(listint_t **head)
 {
 	int length, i;
 	int a, b;
+	int *p = NULL, *t;
 
 	if (*head == NULL)
 		return (1);
 
-	length = listint_len(*head) - 1;
+	length = listint_len(*head);
+	p = malloc(sizeof(length));
+	t = p;
+
+	for (i = 0; i < length; i++, t++)
+	{
+		*t = (*head)->n;
+		*head = (*head)->next;
+	}
 
 	for (i = 0; i < length; i++, length--)
 	{
-		a = get_value(*head, i);
-		b = get_value(*head, length);
+		a = *(p + i);
+		b = *(p + length - 1);
 
 		if (a != b)
 			return (0);
 	}
+
+	free(p);
 	return (1);
 }
