@@ -32,11 +32,16 @@ int is_palindrome(listint_t **head)
 {
 	int length, i, j;
 	int tab[100];
-	listint_t *temp = *head;
+	listint_t *temp;
+
+	if (*head == NULL)
+		return (1);
 
 	length = listint_len(*head);
-	if (length < 2)
+	if (length == 1)
 		return (1);
+
+	temp = *head;
 
 	for (i = 0; temp != NULL; i++)
 	{
