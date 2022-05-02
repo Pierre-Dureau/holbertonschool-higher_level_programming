@@ -30,32 +30,27 @@ int listint_len(listint_t *h)
 
 int is_palindrome(listint_t **head)
 {
-	int length, i;
-	int a, b;
-	int *p = NULL, *t;
-
-	if (*head == NULL)
-		return (1);
+	int length, i, j;
+	int tab[100];
+	listint_t *temp = *head;
 
 	length = listint_len(*head);
-	p = malloc(sizeof(length));
-	t = p;
+	if (length < 2)
+		return (1);
 
-	for (i = 0; i < length; i++, t++)
+	for (i = 0; temp != NULL; i++)
 	{
-		*t = (*head)->n;
-		*head = (*head)->next;
+		tab[i] = temp->n;
+		temp = temp->next;
 	}
 
-	for (i = 0; i < length; i++, length--)
+	i--;
+	length--;
+	for (j = 0; i > j; j++, i--)
 	{
-		a = *(p + i);
-		b = *(p + length - 1);
-
-		if (a != b)
+		if (tab[j] != tab[i])
 			return (0);
 	}
 
-	free(p);
 	return (1);
 }

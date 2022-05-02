@@ -24,6 +24,5 @@ void free_listint(listint_t *head);
 
 int is_palindrome(listint_t **head);
 int listint_len(listint_t *h);
-int get_value(listint_t *head, unsigned int index);
 
 #endif /* LISTS_H */
