@@ -9,8 +9,8 @@
 
 int is_palindrome(listint_t **head)
 {
-	int length = 0, i = 0;
-	int tab[100];
+	int length = 0, i;
+	int tab[10000];
 	listint_t *temp;
 
 	if (*head == NULL)
@@ -27,12 +27,10 @@ int is_palindrome(listint_t **head)
 		return (1);
 
 	length--;
-	while (i < length)
+	for (i = 0; i < length; length--, i++)
 	{
 		if (tab[i] != tab[length])
 			return (0);
-		length--;
-		i++;
 	}
 
 	return (1);
