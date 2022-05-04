@@ -8,7 +8,8 @@ def roman_to_int(roman_string):
     count = 0
 
     for i in range(len(roman_string)):
-        if i < (len(roman_string)) - 1 and letter[roman_string[i]] < letter[roman_string[i + 1]]:
+        if i < (len(roman_string)) - 1 \
+             and letter[roman_string[i]] < letter[roman_string[i + 1]]:
             count -= letter[roman_string[i]]
         else:
             count += letter[roman_string[i]]
