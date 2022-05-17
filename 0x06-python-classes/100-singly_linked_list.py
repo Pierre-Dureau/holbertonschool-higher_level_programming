@@ -36,6 +36,7 @@ class Node:
         else:
             self.__next_node = value
 
+
 class SinglyLinkedList:
     """class Singly Linked List"""
 
