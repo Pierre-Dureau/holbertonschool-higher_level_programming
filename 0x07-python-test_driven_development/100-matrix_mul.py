@@ -8,7 +8,7 @@
 def matrix_mul(m_a, m_b):
     """Return the multiplication of two matrix
         or an error if arguments are not int or float
-        if each row of the matrix are not the same size"""
+        or if each row of the matrix are not the same size"""
 
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
