@@ -25,6 +25,8 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(li), 4)
         li = [1, 4, float("inf"), 2]
         self.assertEqual(max_integer(li), float("inf"))
+        li = [1, 4, float("NaN"), 2]
+        self.assertEqual(max_integer(li), 4)
 
     def test_type_integer(self):
         """Tests type for the max integer"""

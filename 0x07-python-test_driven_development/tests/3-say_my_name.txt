@@ -14,6 +14,10 @@ Now use it:
 	>>> say_my_name("Bob")
 	My name is Bob
 
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
 	>>> say_my_name(2, "Bob")
 	Traceback (most recent call last):
 	TypeError: first_name must be a string
