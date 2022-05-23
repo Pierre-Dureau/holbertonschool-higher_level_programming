@@ -17,6 +17,9 @@ Now use it:
 	>>> matrix_divided([[1, 2], [4, 5]], 0.1)
 	[[10.0, 20.0], [40.0, 50.0]]
 
+	>>> matrix_divided([[1, 2, 3], [4, 5, float("inf")]], 2)
+	[[0.5, 1.0, 1.5], [2.0, 2.5, inf]]
+
 	>>> matrix_divided([1, 3, 5], 2)
 	Traceback (most recent call last):
 	TypeError: matrix must be a matrix (list of lists) of integers/floats

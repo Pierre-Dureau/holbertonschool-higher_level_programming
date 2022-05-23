@@ -28,3 +28,7 @@ Now use it:
 	>>> print_square("A")
 	Traceback (most recent call last):
 	TypeError: size must be an integer
+
+	>>> print_square(float("inf"))
+	Traceback (most recent call last):
+	TypeError: size must be an integer
