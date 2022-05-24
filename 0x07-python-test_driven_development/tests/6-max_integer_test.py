@@ -33,6 +33,12 @@ class TestMaxInteger(unittest.TestCase):
 
         li = [1, 3, "Holberton", 2]
         self.assertRaises(TypeError, max_integer, li)
+        li = [1, 3, (1, 2), 2]
+        self.assertRaises(TypeError, max_integer, li)
+        li = [1, 3, {1, 2}, 2]
+        self.assertRaises(TypeError, max_integer, li)
+        li = [1, 3, {'id': 1}, 2]
+        self.assertRaises(TypeError, max_integer, li)
         li = None
         self.assertRaises(TypeError, max_integer, li)
 
