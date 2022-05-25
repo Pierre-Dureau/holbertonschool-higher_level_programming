@@ -1,4 +1,4 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 """
     This is the lazy_matrix_mul Module
     This module supplies one function lazy_matrix_mul()

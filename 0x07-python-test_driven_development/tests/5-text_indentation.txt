@@ -60,6 +60,15 @@ Lorem?
 Lorem:
 <BLANKLINE>
 
+>>> text_indentation("Holberton. School? How are you:        John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
+
 >>> text_indentation(".:?")
 .
 <BLANKLINE>
