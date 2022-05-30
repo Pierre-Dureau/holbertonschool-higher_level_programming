@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+"""Module add attribute"""
+
+
 def add_attribute(obj, attr, value):
     """adds a new attribute to an object if it’s possible"""
-    if hasattr(obj, "__dict__"):
+    try:
         setattr(obj, attr, value)
-    else:
+    except Exception:
         raise TypeError("can't add new attribute")
