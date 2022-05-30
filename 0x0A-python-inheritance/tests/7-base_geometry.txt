@@ -10,6 +10,10 @@ Now use it:
 
 >>> bg = BaseGeometry()
 
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("width", 89)
+
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
