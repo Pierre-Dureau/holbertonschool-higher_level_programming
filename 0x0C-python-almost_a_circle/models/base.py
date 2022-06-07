@@ -23,7 +23,7 @@ class Base():
     @staticmethod
     def to_json_string(list_dictionaries):
         """Get the JSON string representation"""
-        if list_dictionaries is None:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
@@ -44,7 +44,7 @@ class Base():
     @staticmethod
     def from_json_string(json_string):
         """Get the list of the JSON string representation"""
-        if json_string is None:
+        if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
 
@@ -62,7 +62,7 @@ class Base():
     def load_from_file(cls):
         """Get a list of instances"""
         filename = cls.__name__ + ".json"
-        if os.path.exists(filename):
+        if os.path.exists(filename) is True:
             with open(filename, 'r') as f:
                 list_str = cls.from_json_string(f.read())
                 list_ins = []
