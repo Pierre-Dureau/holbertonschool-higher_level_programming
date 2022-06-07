@@ -4,6 +4,7 @@
 """
 
 import unittest
+from models.base import Base
 from models import square
 Square = square.Square
 
@@ -16,6 +17,7 @@ class TestSquare(unittest.TestCase):
         """
             tests for dictionary for a normal square
         """
+        Base._Base__nb_objects = 0
         s1 = Square(10, 2, 1)
         self.assertEqual(s1.to_dictionary(), {
                          'id': 1, 'x': 2, 'size': 10, 'y': 1})
