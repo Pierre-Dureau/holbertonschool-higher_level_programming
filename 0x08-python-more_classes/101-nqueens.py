@@ -53,7 +53,18 @@ def nQueen(mat, r):
 
 if __name__ == '__main__':
 
-    if (len(argv) == 2 and argv[1] >= '0' and argv[1] <= '9' and int(argv[1]) >= 4):
-        N = int(argv[1])
-        mat = [['–' for x in range(N)] for y in range(N)]
-        nQueen(mat, 0)
+    if (len(argv) != 2):
+        print("Usage: nqueens N")
+        exit(1)
+
+    if (argv[1] < '0' or argv[1] > '9'):
+        print("N must be a number")
+        exit(1)
+
+    if (int(argv[1]) >= 4):
+        print("N must be at least 4")
+        exit(1)
+
+    N = int(argv[1])
+    mat = [['–' for x in range(N)] for y in range(N)]
+    nQueen(mat, 0)
