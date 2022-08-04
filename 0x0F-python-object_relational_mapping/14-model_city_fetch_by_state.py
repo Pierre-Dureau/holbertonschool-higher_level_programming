@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""prints all City objects from"""
+"""prints all City objects with their state name"""
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import Session
 from model_city import Base, City
