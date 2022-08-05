@@ -19,4 +19,3 @@ if __name__ == '__main__':
         for city in state.cities:
             print(f"\t{city.id}: {city.name}")
     session.close()
-
