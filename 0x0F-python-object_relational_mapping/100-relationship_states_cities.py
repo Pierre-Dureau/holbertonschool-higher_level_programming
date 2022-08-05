@@ -19,4 +19,3 @@ if __name__ == '__main__':
     new_state.cities.append(City(name='San Francisco'))
     session.commit()
     session.close()
-
