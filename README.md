@@ -1,5 +1,17 @@
 # holbertonschool-higher_level_programming
 
+<p align="center">
+  <img width=640 height=435 src="https://www.zdnet.com/a/img/resize/816da22fbfe279a4f19cadd7fff83a7f6023c725/2021/09/02/f9723f89-2e71-4a46-a59f-f6838771f2ed/python-code-magnifying-glass-programming-language.jpg?auto=webp&width=1280">
+</p>
+
+## What is this repository for ?
+
+This repository is the initiation to higher level in programmation.
+In Python we learned the POO and used frameworks like Flask, SQLAlchemy to work on the AirBNB clone.
+We also covered SQL and NodeJS.
+
+## Projects
+
 - [0x00. Python - Hello, World](./0x00-python-hello_world/)
 - [0x01. Python - if/else, loops, functions](./0x01-python-if_else_loops_functions/)
 - [0x02. Python - import & modules](./0x02-python-import_modules/)
